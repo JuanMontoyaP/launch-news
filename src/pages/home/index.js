@@ -12,22 +12,12 @@ export default function Home() {
       .then((response) => setArticles(response.data));
   }, []);
 
-  let article;
-  if (articles.length > 0) {
-    article = <ShowArticle article={articles[0]} />;
-  } else {
-    article = <div>Loading...</div>;
-  }
+  const ListArticles = articles.map((item) => <ShowArticle key={item.id} article={item} />);
 
   return (
     <>
       <h1>Articles</h1>
-      {article}
-      {article}
-      {article}
-      {article}
-      {article}
-      {article}
+      {ListArticles}
     </>
   );
 }
