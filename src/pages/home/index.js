@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import getNews from '../../api/articles';
 
+import ShowArticle from '../../components/showArticle';
+
 export default function Home() {
   const [articles, setArticles] = useState([]);
 
@@ -10,14 +12,17 @@ export default function Home() {
       .then((response) => setArticles(response.data));
   }, []);
 
-  const listArticles = [...articles];
-  // eslint-disable-next-line no-console
-  console.log(listArticles[0]);
+  let article;
+  if (articles.length > 0) {
+    article = <ShowArticle article={articles[0]} />;
+  } else {
+    article = <div>Loading...</div>;
+  }
 
   return (
     <>
       <h1>Articles</h1>
-      {/* <ul>{listNews}</ul> */}
+      {article}
     </>
   );
 }
