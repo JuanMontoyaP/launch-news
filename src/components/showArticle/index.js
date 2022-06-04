@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './styles.scss';
-import './style.css';
 
 export default function ShowArticle({ article }) {
   const articleName = article.title;
@@ -13,10 +12,10 @@ export default function ShowArticle({ article }) {
   return (
     <div>
       <a href={articleUrl} target="_blank" rel="noreferrer">
-        <h2>{articleName}</h2>
-        <img src={articleImage} alt={articleName} />
+        <img className="articleImage" src={articleImage} alt={articleName} />
+        <h3 className="articleTitle">{articleName}</h3>
       </a>
-      <p>{articleDescription}</p>
+      <p className="articleDescription">{articleDescription}</p>
     </div>
   );
 }

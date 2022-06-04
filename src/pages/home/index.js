@@ -23,6 +23,11 @@ export default function Home() {
     <>
       <h1>Articles</h1>
       {article}
+      {article}
+      {article}
+      {article}
+      {article}
+      {article}
     </>
   );
 }

@@ -1,5 +1,18 @@
 $color: #000000;
 
-h2 {
+.articleTitle {
   color: $color;
+  // float: left;
+}
+
+.articleDescription {
+  color: $color;
+  // float: left;
+}
+
+.articleImage {
+  display: block;
+  width: 14%;
+  margin: 15px;
+  border-radius: 8px;
 }
