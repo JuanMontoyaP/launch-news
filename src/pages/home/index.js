@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import getNews from '../../api/articles';
 
 import ShowArticle from '../../components/showArticle';
+import NextPage from '../../components/nextPage';
 
 export default function Home() {
   const [articles, setArticles] = useState([]);
@@ -18,6 +19,7 @@ export default function Home() {
     <>
       <h1>Articles</h1>
       {ListArticles}
+      <NextPage />
     </>
   );
 }
