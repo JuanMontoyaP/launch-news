@@ -4,13 +4,17 @@ import './App.css';
 
 import Home from './pages/home';
 
+import { HomeProvider } from './context/homeContext';
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      <Home />
+      <HomeProvider>
+        <Home />
+      </HomeProvider>
     </div>
   );
 }
