@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import HomeContext from '../../context/homeContext';
 
 export default function ChangePage() {
-  // eslint-disable-next-line no-unused-vars
   const { start, setStart } = useContext(HomeContext);
 
   let backButton;
