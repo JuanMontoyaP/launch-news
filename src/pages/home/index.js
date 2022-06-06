@@ -13,7 +13,7 @@ export default function Home() {
   const { start } = useContext(HomeContext);
 
   useEffect(() => {
-    getNews('', { _limit: 10, _start: start })
+    getNews('', { _limit: 5, _start: start })
       .then((response) => setArticles(response.data));
 
     window.scrollTo(0, 0);

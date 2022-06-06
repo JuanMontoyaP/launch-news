@@ -15,6 +15,10 @@ function App() {
       <HomeProvider>
         <Home />
       </HomeProvider>
+      <footer className="App-footer">
+        <p>Author: Juan Pablo Montoya</p>
+        <p><a className="App-link" href="https://api.spaceflightnewsapi.net/v3/documentation#/" target="_blank" rel="noreferrer">Spaceflight News API</a></p>
+      </footer>
     </div>
   );
 }
