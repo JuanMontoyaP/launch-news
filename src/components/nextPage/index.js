@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 import HomeContext from '../../context/homeContext';
 
 export default function NextPage() {
-  const data = useContext(HomeContext);
-  // console.log(data);
+  // eslint-disable-next-line no-unused-vars
+  const { start, setStart } = useContext(HomeContext);
 
   return (
     <div>
-      <button type="button" onClick={() => console.log(data)}>Next page</button>
+      <button type="button" onClick={() => { setStart(start + 10); }}>Next page</button>
     </div>
   );
 }

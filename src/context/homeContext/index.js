@@ -1,15 +1,17 @@
-import React, { createContext } from 'react';
+import React, { useState, createContext, useMemo } from 'react';
+import propTypes from 'prop-types';
 
 const HomeContext = createContext();
 
 export default HomeContext;
 
-// eslint-disable-next-line react/prop-types
 export function HomeProvider({ children }) {
-  // eslint-disable-next-line react/jsx-no-constructed-context-values
-  const contextData = {
-    data: 1,
-  };
+  const [start, setStart] = useState(0);
+
+  const contextData = useMemo(() => ({
+    start,
+    setStart,
+  }), [start]);
 
   return (
     <HomeContext.Provider value={contextData}>
@@ -17,3 +19,7 @@ export function HomeProvider({ children }) {
     </HomeContext.Provider>
   );
 }
+
+HomeProvider.propTypes = {
+  children: propTypes.node.isRequired,
+};
