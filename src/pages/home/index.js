@@ -3,7 +3,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import getNews from '../../api/articles';
 
 import ShowArticle from '../../components/showArticle';
-import NextPage from '../../components/nextPage';
+import ChangePage from '../../components/changePage';
 
 import HomeContext from '../../context/homeContext';
 
@@ -25,7 +25,7 @@ export default function Home() {
     <>
       <h1>Articles</h1>
       {ListArticles}
-      <NextPage />
+      <ChangePage />
     </>
   );
 }
